@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device.width, height=device.height, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/master.css" />
+<title>CMU Bar Specials</title>
+
+<!-- JQuery and Framework stuff -->
+
+<!-- <link href="css/jquery-mobile.css" rel="stylesheet"type="text/css" /> -->
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery-mobile.js" type="text/javascript"></script>
+<script src="js/jquery-ui.js" type="text/javascript"></script>
+<!-- <script src="js/cordova.js" type="text/javascript"></script> -->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+							   
+		var currentPosition = 0;
+		var slideWidth = 420;
+		var slides = $('.slide');
+		var numberOfSlides = slides.length;
+		var slideShowInterval;
+		var speed = 6000;
+
+		
+		slideShowInterval = setInterval(changePosition, speed);
+		
+		slides.wrapAll('<div id="slidesHolder"></div>')
+		
+		slides.css({ 'float' : 'left', 'width' :slideWidth });
+		
+		$('#slidesHolder').css('width', slideWidth * numberOfSlides);
+		
+		
+		function changePosition() {
+			if(currentPosition == numberOfSlides - 1) {
+				currentPosition = 0;
+			} else {
+				currentPosition++;
+			}
+			moveSlide();
+		}
+		
+		
+		function moveSlide() {
+				$('#slidesHolder')
+				  .animate({'marginLeft' : slideWidth*(-currentPosition)});
+		}
+
+	});
+</script>
+
+</head>
+
+<body>
+<!-- Beginning of Application -->
+<div class="app">
+
+<div class="topTabs2">
+
+<!--
+<button><img class="tab" src="img/Home Tabs/HomeTab.png" /></button>
+<button><img class="tab" src="img/Home Tabs/dayTab.png" /></button>
+<button><img class="tab" src="img/Home Tabs/BarTab.png" /></button>
+<button><img class="tab" src="img/Home Tabs/TaxiTab.png" /></button>
+<button><img class="tab" src="img/Home Tabs/talkTab.png" /></button>
+-->
+
+<a href="index.html" class="tab2"><img src="img/Home Tabs/HomeTab.png" /></a>
+<a href="SpecialsByDay2.html" class="tab2"><img src="img/Home Tabs/dayTab.png" /></a>
+<a href="bars.html" class="tab2"><img src="img/Home Tabs/BarTab.png" /></a>
+<a href="" class="tab2"><img src="img/Home Tabs/TaxiTab.png" /></a>
+<a href="" class="tab2"><img src="img/Home Tabs/talkTab.png" /></a>
+
+</div>
+<!-- End Tabs -->
+
+<!-- Top slider -->
+<div id="topSlider">
+<h2> Featured Specials </h2>
+	<div id="slidesContainer">
+    	<div class="slide">
+    	<!-- Monday -->
+		<h3 style='margin-top:1px;'>Monday</h3>
+        
+        
+		</div>
+        <div class="slide">
+    	<!-- Tuesday -->
+        <h3 style='margin-top:1px;'>Tuesday</h3>
+		
+		</div>
+        <div class="slide">
+    	<!-- Wednesday -->
+		<h3 style='margin-top:1px;'>Wednesday</h3>
+        
+		</div>
+        <div class="slide">
+    	<!-- Thursday -->
+		<h3 style='margin-top:1px;'>Thursday</h3>
+        
+		</div>
+        <div class="slide">
+    	<!-- Friday -->
+		<h3 style='margin-top:1px;'>Friday</h3>
+        
+		</div>
+        <div class="slide">
+    	<!-- Saturday -->
+		<h3 style='margin-top:1px;'>Saturday</h3>
+        
+		</div>
+        <div class="slide">
+    	<!-- Sunday -->
+        <h3 style='margin-top:1px;'>Sunday</h3>
+		
+		</div>
+	</div>
+</div>
+<!-- End Top Slider -->
+
+<!-- APP CONTENT -->
+<div class="appContent">
+
+<h3>New Bar Talk</h3>
+<button><img class="tab" src="img/Home Tabs/talkTab.png" /></button>
+<br />
+<br />
+<br />
+<button>Upgrade to Pro</button>
+<br />
+<br />
+<br />
+	<br />
+<br />
+<br />
+	
+</div>
+<!-- END APP CONTENT -->
+</div>
+<!-- End of Application -->
+</body>
+</html>

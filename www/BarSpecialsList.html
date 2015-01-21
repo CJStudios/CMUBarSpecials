@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<meta name="viewport" content="width=device.width, height=device.height, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+
+
+<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+<link href="css/jquery-mobile.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/themes/BarTheme.css" />
+<link rel="stylesheet" type="text/css" href="css/bars.css" />
+
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery-mobile.js" type="text/javascript"></script>
+<script src="js/jquery-ui.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/master.css" />
+<script>
+
+$('#BarSpecialsList').live('pageinit', function(event){
+	var str ='';
+	print("<p>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>");
+	$('ul').listview('childPages').each(function(){
+		str =$(this).find("div[class$='ui-title']").html() + ', ' + str;
+	});
+	$('#nestedlists').html('Specials : ' + str);
+});
+</script>
+
+
+<title>Bar Specials List</title>
+</head>
+
+<body>
+<div class='app'>
+<div class="topTabs2">
+
+<button><img class="tab" src="img/Home Tabs/HomeTab.png" /></button>
+<button><img class="tab" src="img/Home Tabs/dayTab.png" /></button>
+<button><img class="tab" src="img/Home Tabs/BarTab.png" /></button>
+<button><img class="tab" src="img/Home Tabs/TaxiTab.png" /></button>
+<button><img class="tab" src="img/Home Tabs/talkTab.png" /></button>
+
+
+</div>
+<!-- End Tabs -->
+<!-- APP CONTENT -->
+<div class="weeklySpecials" data-role='page' data-theme='a' style='
+width:400px; 
+margin-left:auto;
+margin-right:auto;
+'>
+<h2 data-role='header'>Bar Name</h2>
+<div class="days" data-role='content' data-theme='a' data-inset='true'>
+<ul data-role='listview'>
+	<li style="padding-top:1px; padding-bottom:1px;"><div data-role='collapsible' >
+    <h2 style="font-size:14px;">Monday</h2>
+    	<ul data-role='listview' data-inset='true' style='font-size:12px;'>
+        	<li>$2 Domestic Bottles</li>
+        	<li>$5 Pitchers</li>
+            <li>$2 You call its</li>
+        </ul></div><p class='ui-li-count' style="padding-top:1px;margin-top:1px;">3</p>
+        </li>
+	<li style="padding-top:1px; padding-bottom:1px;"><div data-role='collapsible'>
+    <h2 style="font-size:14px;">Tuesday</h2>
+    	<ul data-role='listview' data-inset='true' style='font-size:12px;'>
+        	<li>$1 off drafts and pitchers</li>
+        	<li></li>
+            <li></li>
+        </ul></div>
+        </li>
+    <li style="padding-top:1px; padding-bottom:1px;"><div data-role='collapsible' >
+    <h2 style="font-size:14px;">Wednesday</h2>
+        <ul data-role='listview' data-inset='true' style='font-size:12px;'>
+        	<li></li>
+        	<li></li>
+            <li></li>
+        </ul></div>
+        </li>
+    <li style="padding-top:1px; padding-bottom:1px;"><div data-role='collapsible' >
+    <h2 style="font-size:14px;">Thursday</h2>
+        <ul data-role='listview' data-inset='true' style='font-size:12px;'>
+        	<li></li>
+        	<li></li>
+            <li></li>
+        </ul></div>
+        </li>
+    <li style="padding-top:1px; padding-bottom:1px;"><div data-role='collapsible' >
+    <h2 style="font-size:14px;">Friday</h2>
+        <ul data-role='listview' data-inset='true' style='font-size:12px;'>
+        	<li></li>
+        	<li></li>
+            <li></li>
+        </ul></div>
+        </li>
+    <li style="padding-top:1px; padding-bottom:1px;"><div data-role='collapsible' >
+    <h2 style="font-size:14px;">Saturday</h2>
+        <ul data-role='listview' data-inset='true' style='font-size:12px;'>
+        	<li></li>
+        	<li></li>
+            <li></li>
+        </ul></div>
+        </li>
+    <li style="padding-top:1px; padding-bottom:1px;"><div data-role='collapsible' >
+    <h2 style="font-size:14px;">Sunday</h2>
+        <ul data-role='listview' data-inset='true' style='font-size:12px;'>
+        	<li></li>
+        	<li></li>
+            <li></li>
+        </ul></div>
+        </li>
+</ul>
+
+</div>
+
+
+
+	
+	
+</div>
+<!-- END APP CONTENT -->
+
+
+</div>
+</body>
+</html>
