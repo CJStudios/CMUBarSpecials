@@ -25,26 +25,36 @@ body
 	height:800px;
 }
 
+
+
 .topTabs
 {
 	height:100px;
 }
-.topTabs img
-{
-	padding:2px;
-	
-	
-}
-.topTabs2 button
+
+
+
+.topTabs button
 {
 	padding:0px;
-	margin:0px;
+	margin:1px;
 	background-color:#383a3b;
 	border-style:none;
 }
 
+/* New Stuff */
+#topNav
+{
+	width:600px;
+	margin-left:auto;
+	margin-right:auto;
+}
 
-
+#topNav a
+{
+	padding:0px;
+	
+}
 
 
 
